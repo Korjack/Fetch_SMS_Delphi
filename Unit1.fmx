@@ -1,0 +1,134 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 600
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object ListBox1: TListBox
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 561.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnItemClick = ListBox1ItemClick
+    Viewport.Width = 360.000000000000000000
+    Viewport.Height = 513.000000000000000000
+    object SearchBox1: TSearchBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      Size.Width = 360.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'toolbarstyle'
+    TabOrder = 1
+    TintColor = claLightskyblue
+    object addPhone: TSpeedButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      Text = 'addPhone'
+      OnClick = changePhoneClick
+    end
+    object reloadSMS: TSpeedButton
+      Align = Left
+      Position.X = 48.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'reloadSMS'
+      OnClick = msgLoadClick
+    end
+  end
+  object blackBG: TRectangle
+    Align = Contents
+    Fill.Color = claBlack
+    Opacity = 0.500000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 600.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+  end
+  object Popup1: TPopup
+    Position.X = 72.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 209.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object whiteBG: TRectangle
+      Align = Top
+      Fill.Color = claWhite
+      Size.Width = 209.000000000000000000
+      Size.Height = 129.000000000000000000
+      Size.PlatformDefault = False
+      object adding: TButton
+        Position.Y = 88.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = #54869#51064
+        OnClick = addingClick
+      end
+      object cancel: TButton
+        Position.X = 104.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #52712#49548
+        OnClick = cancelClick
+      end
+      object Label1: TLabel
+        Align = Top
+        StyledSettings = [Style, FontColor]
+        Size.Width = 209.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Agency FB'
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #51204#54868#48264#54840#47484' - '#50630#51060' '#51077#47141#54644#51452#49464#50836
+        TabOrder = 2
+      end
+      object PhoneBG: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Position.Y = 49.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        object PhoneNumber: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          StyleLookup = 'editstyle'
+          TabOrder = 0
+          Size.Width = 209.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+  end
+end
